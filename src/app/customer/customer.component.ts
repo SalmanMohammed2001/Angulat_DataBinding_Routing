@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-customer',
@@ -7,6 +8,15 @@ import { Component } from '@angular/core';
   templateUrl: './customer.component.html',
   styleUrl: './customer.component.scss'
 })
-export class CustomerComponent {
+export class CustomerComponent implements OnInit{
+  constructor(private activeRoute:ActivatedRoute) {
+  }
+  data=''
+
+  ngOnInit(): void {
+    this.activeRoute.paramMap.subscribe((data)=>{
+      this.data=data.get('data')!
+    })
+  }
 
 }
