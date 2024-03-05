@@ -1,0 +1,33 @@
+
+
+<h1>Home Page</h1>
+
+
+<h2>--------------------------------one Way Data binding start--------------------</h2>
+<br>
+<br>
+<h2 style="color: brown"> Interpolation  </h2>
+<h3>Hello Iam {{name}} and my age is {{25}}</h3>  <!--interpolation {{}}-->
+<br>
+<img src="{{image}}" alt="image" width="{{width}}">
+
+
+<br>
+<br>
+<h2 style="color: brown"> Property binding  </h2> <!--Property binding []-->
+<img [src]="image"  alt="" [width]="width" [style.border-top]="1">
+
+
+<br>
+<br>
+<h2 style="color: brown"> event binding  </h2> <!--event binding {{}}-->
+
+<input type="text" placeholder="type here" #myVar  (keyup.enter)="setData(myVar.value)" > |
+<button (click)="printData()"> Print data</button>
+
+
+
+
+
+
+<h2>--------------------------------one Way Data binding End--------------------</h2>
