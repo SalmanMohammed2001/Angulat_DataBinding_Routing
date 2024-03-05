@@ -31,3 +31,20 @@
 
 
 <h2>--------------------------------one Way Data binding End--------------------</h2>
+
+<br>
+<br>
+<br>
+
+<h2>--------------------------------Two Way Data binding End--------------------</h2>
+
+<input type="text" placeholder="type here" #myValue  (keyup)="myName=myValue.value" >
+<h3>{{myName}}</h3>
+
+<br>
+<br>
+
+<input type="text" placeholder="type here" #myValue  [(ngModel)]="myName" >
+<h3>{{myName}}</h3>
+
+<h2>--------------------------------Two Way Data binding End--------------------</h2>
