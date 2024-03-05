@@ -39,12 +39,12 @@
 <h2>--------------------------------Two Way Data binding End--------------------</h2>
 
 <input type="text" placeholder="type here" #myValue  (keyup)="myName=myValue.value" >
-<h3>{{myName}}</h3>
+<h3>{{myName}}</h3>  <!-- interpolation event binding to archive tow way data binding -->
 
 <br>
 <br>
 
-<input type="text" placeholder="type here" #myValue  [(ngModel)]="myName" >
+<input type="text" placeholder="type here" #myValue  [(ngModel)]="myName" > <!--original 2way data binding -->
 <h3>{{myName}}</h3>
 
 <h2>--------------------------------Two Way Data binding End--------------------</h2>
